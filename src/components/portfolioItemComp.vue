@@ -18,7 +18,7 @@
 					</p>
 					<router-link
 						class="item__btn"
-						:to="{ name: 'DetailPage', params: { id: itemAlbum.name }, query: { info: itemAlbum }, hash: '#home' }">
+						:to="{ name: 'detailPage', params: { id: itemAlbum.name }, query: { info: itemAlbum }, hash: '#home' }">
 						{{ $t('portfolio.btn') }}
 					</router-link>
 				</div>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-	name: 'portfolioItem',
+	name: 'portfolioItemComp',
 	props: {
 		itemAlbum: {
 			type: Object,
@@ -85,7 +85,7 @@ export default {
 
 	&__title {
 		font-size: 1.3rem;
-		line-height: 29/24*100%;
+		line-height: calc(29/24*100%);
 	}
 
 	&__text {

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import homePage from '@/views/homePage'
+import homePage from '@/pages/homePage'
 
 Vue.use(VueRouter)
 
@@ -12,12 +12,19 @@ const routes = [
   },
   {
     path: '/portfolio/:id',
-    name: 'DetailPage',
-    component: () => import('@/views/portfolioDetailPage.vue')
+    name: 'detailPage',
+    component: () => import('@/pages/portfolioDetailPage.vue')
+  },
+  {
+    path: '/error',
+    name: 'errorPage',
+    component: () => import('@/pages/errorPage.vue')
   },
   {
     path: '*',
-    redirect: '/'
+    redirect: {
+      name: 'errorPage'
+    }
   }
 ]
 

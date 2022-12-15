@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import portfolioItem from '@/components/portfolioItem.vue'
+import portfolioItem from '@/components/portfolioItemComp.vue'
 
 export default {
-	name: 'portfolioPage',
+	name: 'portfolioComp',
 	components: {
 		portfolioItem,
 	},
@@ -50,8 +50,9 @@ export default {
 			direction: 'left',
 			portfolioAlbum: [
 				{ img: require('@/assets/app_auth.png'), title: 'portfolioTitle.titleOne', text: 'portfolioText.textOne', link: 'https://starnovskiy97.github.io/Registration-page/', name: 'auth&reg-page' },
-				{ img: require('@/assets/app_ping-pong.png'), title: 'portfolioTitle.titleTwo', text: 'portfolioText.textTwo', link: 'https://starnovskiy97.github.io/ping-pong/', name: 'ping-pong' },
-				{ img: require('@/assets/app_vr.png'), title: 'portfolioTitle.titleThree', text: 'portfolioText.textThree', link: 'https://starnovskiy97.github.io/VR-traveling/', name: 'vr-traveling' },
+				{ img: require('@/assets/app_ping-pong.png'), title: 'portfolioTitle.titleTwo', text: 'portfolioText.textTwo', link: 'https://starnovskiy97.github.io/Ping-pong/', name: 'ping-pong' },
+				{ img: require('@/assets/app_doNFT.png'), title: 'portfolioTitle.titleThree', text: 'portfolioText.textThree', link: 'https://donft.io/', name: 'doNFT' },
+				{ img: require('@/assets/app_vr.png'), title: 'portfolioTitle.titleFour', text: 'portfolioText.textFour', link: 'https://starnovskiy97.github.io/VR-traveling/', name: 'vr-traveling' },
 			]
 
 		}
@@ -103,7 +104,7 @@ export default {
 	&__title {
 		font-size: 3rem;
 		font-weight: 400;
-		line-height: 54/48*100%;
+		line-height: calc(54/48*100%);
 		text-align: center;
 		padding: 100px 0 50px 0;
 	}

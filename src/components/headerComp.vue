@@ -2,12 +2,12 @@
 	<div class="header">
 		<div class="container">
 
-			<div class="header__logo">
+			<router-link class="header__logo" to="/#home">
 				<img
 					class="header__img"
 					src="@/assets/Logo.svg" alt="logo">
 				<div class="header__text">Starnovskiy</div>
-			</div>
+			</router-link>
 
 			<ul class="header__menu">
 				<li
@@ -54,11 +54,11 @@
 </template>
 
 <script>
-import headerBurger from '@/components/headerBurger.vue'
+import headerBurger from '@/components/headerBurgerComp.vue'
 import vClickOutside from 'v-click-outside'
 
 export default {
-	name: 'headerPage',
+	name: 'headerComp',
 	components: { headerBurger },
 	data() {
 		return {
@@ -156,14 +156,16 @@ export default {
 		&:not(:last-child) {
 			margin: 0 4.5rem 0 0;
 		}
+
+		a {
+			&:hover {
+				color: #FF7600;
+			}
+		}
 	}
 
 	a {
 		color: #e4e4e4;
-
-		&:hover {
-			color: #FF7600;
-		}
 	}
 
 	&__burger-wrapper {
@@ -215,6 +217,7 @@ export default {
 
 			&:hover {
 				background-color: rgb(121, 119, 119);
+				color: #FF7600;
 			}
 		}
 	}
@@ -247,10 +250,14 @@ export default {
 			&__menu-burger {
 				display: block;
 			}
+		}
+	}
 
-			//&__dropbox {
-			//	//display: none;
-			//}
+	@media (max-width: 25em) {
+		.header__img {
+			max-width: 3rem;
+			max-height: 1.5rem;
+			margin: 10px 7px 10px 0;
 		}
 	}
 }

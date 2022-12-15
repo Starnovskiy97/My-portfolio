@@ -23,7 +23,7 @@
 
 <script>
 export default {
-	name: 'skillsPage',
+	name: 'skillsComp',
 	data() {
 		return {
 			items: [
@@ -50,7 +50,7 @@ export default {
 	&__title {
 		font-size: 3rem;
 		font-weight: 400;
-		line-height: 54/48*100%;
+		line-height: calc(54/48*100%);
 		text-align: center;
 		padding: 100px 0 50px 0;
 	}
@@ -79,7 +79,7 @@ export default {
 
 	&__text {
 		font-size: 1.3rem;
-		line-height: 29/24*100%;
+		line-height: calc(29/24*100%);
 		font-weight: 300;
 		margin-top: 15px;
 	}

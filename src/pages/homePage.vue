@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<header-page id="home" />
+		<header-comp id="home" />
 
 		<div class="container">
 			<div class="home__wrapper">
@@ -26,26 +26,26 @@
 			</div>
 		</div>
 
-		<skills-page id="skills" />
-		<portfolio-page id="portfolio" />
-		<footer-page id="contacts" />
+		<skills-comp id="skills" />
+		<portfolio-comp id="portfolio" />
+		<footer-comp id="contacts" />
 
 	</div>
 </template>
 
 <script>
-import headerPage from '@/components/headerPage.vue'
-import skillsPage from '@/components/skillsPage.vue'
-import portfolioPage from '@/components/portfolioPage.vue'
-import footerPage from '@/components/footerPage.vue'
+import headerComp from '@/components/headerComp.vue'
+import skillsComp from '@/components/skillsComp.vue'
+import portfolioComp from '@/components/portfolioComp.vue'
+import footerComp from '@/components/footerComp.vue'
 
 export default {
 	name: 'homePage',
 	components: {
-		headerPage,
-		skillsPage,
-		portfolioPage,
-		footerPage,
+		headerComp,
+		skillsComp,
+		portfolioComp,
+		footerComp,
 	}
 }
 </script>
@@ -87,7 +87,7 @@ export default {
 		font-weight: 700;
 		font-size: 4rem;
 		letter-spacing: 2px;
-		line-height: 72/64*100%;
+		line-height: calc(72/64*100%);
 		margin: 20px 0;
 		color: #e4e4e4;
 	}

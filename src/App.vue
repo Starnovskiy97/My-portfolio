@@ -105,7 +105,7 @@ h6 {
 body {
 	font-family: Fira Code;
 	font-size: 1.125rem;
-	line-height: 21/18*100%;
+	line-height: calc(21/18*100%);
 	color: #FFFFFF;
 	font-weight: 300;
 	margin: 0;

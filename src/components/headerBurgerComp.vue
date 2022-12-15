@@ -33,7 +33,7 @@
 
 <script>
 export default {
-	name: 'headerBurger',
+	name: 'headerBurgerComp',
 	props: {
 		menuLinksData: {
 			type: Array,

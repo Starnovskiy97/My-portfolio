@@ -1,6 +1,6 @@
 <template>
 	<div class="portfolio-detail">
-		<header-page id="home" />
+		<header-comp id="home" />
 
 		<div class="container">
 			<div class="portfolio-detail__title">
@@ -31,19 +31,19 @@
 			</div>
 		</div>
 
-		<footer-page id="contacts" />
+		<footer-comp id="contacts" />
 	</div>
 </template>
 
 <script>
-import headerPage from '@/components/headerPage.vue'
-import footerPage from '@/components/footerPage.vue'
+import headerComp from '@/components/headerComp.vue'
+import footerComp from '@/components/footerComp.vue'
 
 export default {
 	name: 'portfolioDetailPage',
 	components: {
-		headerPage,
-		footerPage,
+		headerComp,
+		footerComp,
 	},
 	computed: {
 		title() {
@@ -200,7 +200,7 @@ export default {
 
 		.portfolio-detail__title {
 			font-size: 1.6rem;
-			margin: 10px 0 15px 0
+			margin: 10px 0 50px 0
 		}
 
 		.portfolio-detail__image {
@@ -211,11 +211,11 @@ export default {
 		.portfolio-detail__info {
 			font-size: 0.9rem;
 			max-width: 280px;
-			margin: 10px 0 10px 0;
+			margin: 20px 0 10px 0;
 		}
 
 		.mrg-btn {
-			margin: 0 5px 15px 5px;
+			margin: 20px 5px 0px 5px;
 		}
 	}
 }
